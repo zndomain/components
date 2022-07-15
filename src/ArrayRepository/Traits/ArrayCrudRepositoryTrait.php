@@ -2,16 +2,16 @@
 
 namespace ZnDomain\Сomponents\ArrayRepository\Traits;
 
-use ZnCore\Arr\Helpers\FilterHelper;
 use ZnCore\Collection\Interfaces\Enumerable;
 use ZnCore\Contract\Common\Exceptions\InvalidMethodParameterException;
-use ZnCore\Entity\Exceptions\NotFoundException;
-use ZnCore\Entity\Helpers\EntityHelper;
-use ZnCore\Entity\Interfaces\EntityIdInterface;
-use ZnCore\Query\Entities\Query;
+use ZnDomain\Entity\Exceptions\NotFoundException;
+use ZnDomain\Entity\Helpers\EntityHelper;
+use ZnDomain\Entity\Interfaces\EntityIdInterface;
+use ZnDomain\Query\Entities\Query;
 use ZnDomain\Domain\Traits\DispatchEventTrait;
 use ZnDomain\Repository\Traits\CrudRepositoryFindAllTrait;
 use ZnDomain\Repository\Traits\CrudRepositoryFindOneTrait;
+use ZnDomain\Сomponents\ArrayRepository\Helpers\FilterHelper;
 
 trait ArrayCrudRepositoryTrait
 {

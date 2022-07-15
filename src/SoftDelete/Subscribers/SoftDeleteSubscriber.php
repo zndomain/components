@@ -3,8 +3,8 @@
 namespace ZnDomain\Сomponents\SoftDelete\Subscribers;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use ZnCore\Query\Entities\Where;
-use ZnCore\Query\Enums\OperatorEnum;
+use ZnDomain\Query\Entities\Where;
+use ZnDomain\Query\Enums\OperatorEnum;
 use ZnDomain\Domain\Enums\EventEnum;
 use ZnDomain\Domain\Events\EntityEvent;
 use ZnDomain\Domain\Events\QueryEvent;

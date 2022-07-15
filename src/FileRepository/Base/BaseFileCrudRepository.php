@@ -3,7 +3,7 @@
 namespace ZnDomain\Сomponents\FileRepository\Base;
 
 use ZnCore\DotEnv\Domain\Libs\DotEnv;
-use ZnCore\Query\Entities\Query;
+use ZnDomain\Query\Entities\Query;
 use ZnDomain\Repository\Interfaces\CrudRepositoryInterface;
 use ZnDomain\Сomponents\ArrayRepository\Traits\ArrayCrudRepositoryTrait;
 use ZnLib\Components\Store\StoreFile;
