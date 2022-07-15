@@ -3,10 +3,10 @@
 namespace ZnDomain\Сomponents\Author\Subscribers;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use ZnDomain\Entity\Helpers\EntityHelper;
-use ZnDomain\Entity\Interfaces\EntityIdInterface;
+use ZnCore\Code\Helpers\PropertyHelper;
 use ZnDomain\Domain\Enums\EventEnum;
 use ZnDomain\Domain\Events\EntityEvent;
+use ZnDomain\Entity\Interfaces\EntityIdInterface;
 use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
 
 class SetAuthorIdSubscriber implements EventSubscriberInterface
@@ -39,6 +39,6 @@ class SetAuthorIdSubscriber implements EventSubscriberInterface
         /** @var EntityIdInterface $entity */
         $entity = $event->getEntity();
         $identityId = $this->authService->getIdentity()->getId();
-        EntityHelper::setAttribute($entity, $this->attribute, $identityId);
+        PropertyHelper::setAttribute($entity, $this->attribute, $identityId);
     }
 }
