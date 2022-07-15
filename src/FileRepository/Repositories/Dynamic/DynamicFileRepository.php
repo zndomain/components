@@ -3,7 +3,7 @@
 namespace ZnDomain\Сomponents\FileRepository\Repositories\Dynamic;
 
 use ZnCore\Arr\Helpers\ArrayHelper;
-use ZnDomain\Entity\Exceptions\NotFoundException;
+use ZnCore\Contract\Common\Exceptions\NotFoundException;
 use ZnCore\FileSystem\Helpers\FileStorageHelper;
 use ZnDomain\Query\Entities\Query;
 use ZnDomain\Сomponents\ArrayRepository\Helpers\FilterHelper;

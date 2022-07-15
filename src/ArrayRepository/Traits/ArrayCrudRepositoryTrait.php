@@ -4,7 +4,7 @@ namespace ZnDomain\Сomponents\ArrayRepository\Traits;
 
 use ZnCore\Collection\Interfaces\Enumerable;
 use ZnCore\Contract\Common\Exceptions\InvalidMethodParameterException;
-use ZnDomain\Entity\Exceptions\NotFoundException;
+use ZnCore\Contract\Common\Exceptions\NotFoundException;
 use ZnDomain\Entity\Helpers\EntityHelper;
 use ZnDomain\Entity\Interfaces\EntityIdInterface;
 use ZnDomain\Query\Entities\Query;
