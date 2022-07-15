@@ -2,23 +2,16 @@
 
 namespace ZnDomain\Сomponents\FileRepository\Base;
 
-use ZnDomain\Сomponents\ArrayRepository\Traits\ArrayCrudRepositoryTrait;
 use ZnCore\DotEnv\Domain\Libs\DotEnv;
-use ZnCore\FileSystem\Helpers\FilePathHelper;
 use ZnCore\Query\Entities\Query;
 use ZnDomain\Repository\Interfaces\CrudRepositoryInterface;
+use ZnDomain\Сomponents\ArrayRepository\Traits\ArrayCrudRepositoryTrait;
 use ZnLib\Components\Store\StoreFile;
 
 abstract class BaseFileCrudRepository extends BaseFileRepository implements CrudRepositoryInterface
 {
 
     use ArrayCrudRepositoryTrait;
-
-
-    /*public function tableName(): string
-    {
-        throw new NotImplementedMethodException('Not Implemented Method "tableName"');
-    }*/
 
     public function directory(): string
     {

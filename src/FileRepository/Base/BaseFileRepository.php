@@ -2,13 +2,11 @@
 
 namespace ZnDomain\Сomponents\FileRepository\Base;
 
-use ZnCore\Contract\Common\Exceptions\NotImplementedMethodException;
 use ZnCore\DotEnv\Domain\Libs\DotEnv;
-use ZnCore\FileSystem\Helpers\FilePathHelper;
-use ZnLib\Components\Store\StoreFile;
 use ZnDomain\EntityManager\Interfaces\EntityManagerInterface;
-use ZnDomain\Repository\Interfaces\RepositoryInterface;
 use ZnDomain\EntityManager\Traits\EntityManagerAwareTrait;
+use ZnDomain\Repository\Interfaces\RepositoryInterface;
+use ZnLib\Components\Store\StoreFile;
 
 abstract class BaseFileRepository implements RepositoryInterface
 {
@@ -19,11 +17,6 @@ abstract class BaseFileRepository implements RepositoryInterface
     {
         $this->setEntityManager($em);
     }
-
-    /*public function tableName(): string
-    {
-        throw new NotImplementedMethodException('Not Implemented Method "tableName"');
-    }*/
 
     public function directory(): string
     {

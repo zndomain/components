@@ -9,9 +9,6 @@ use ZnDomain\Domain\Enums\EventEnum;
 use ZnDomain\Domain\Events\EntityEvent;
 use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
 
-/**
- * @todo: перенести в отдельный пакет
- */
 class SetAuthorIdSubscriber implements EventSubscriberInterface
 {
 

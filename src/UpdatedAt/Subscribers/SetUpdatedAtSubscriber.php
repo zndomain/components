@@ -6,9 +6,6 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use ZnDomain\Domain\Enums\EventEnum;
 use ZnDomain\Domain\Events\EntityEvent;
 
-/**
- * @todo: перенести в отдельный пакет
- */
 class SetUpdatedAtSubscriber implements EventSubscriberInterface
 {
 

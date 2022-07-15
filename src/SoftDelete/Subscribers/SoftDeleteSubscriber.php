@@ -3,14 +3,14 @@
 namespace ZnDomain\Сomponents\SoftDelete\Subscribers;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use ZnLib\Components\Status\Enums\StatusEnum;
 use ZnCore\Query\Entities\Where;
-use ZnDomain\Domain\Enums\EventEnum;
 use ZnCore\Query\Enums\OperatorEnum;
+use ZnDomain\Domain\Enums\EventEnum;
 use ZnDomain\Domain\Events\EntityEvent;
 use ZnDomain\Domain\Events\QueryEvent;
 use ZnDomain\EntityManager\Interfaces\EntityManagerInterface;
 use ZnDomain\EntityManager\Traits\EntityManagerAwareTrait;
+use ZnLib\Components\Status\Enums\StatusEnum;
 
 class SoftDeleteSubscriber implements EventSubscriberInterface
 {
@@ -18,6 +18,7 @@ class SoftDeleteSubscriber implements EventSubscriberInterface
     use EntityManagerAwareTrait;
 
     public $disableStatusId = StatusEnum::DELETED;
+
 //    public $enableStatusId = StatusEnum::ENABLED;
 
     public function __construct(EntityManagerInterface $entityManager)
@@ -47,10 +48,10 @@ class SoftDeleteSubscriber implements EventSubscriberInterface
 
     public function onForgeQuery(QueryEvent $event)
     {
-        if($event->getQuery()->getWhere()) {
+        if ($event->getQuery()->getWhere()) {
             foreach ($event->getQuery()->getWhere() as $where) {
                 /** @var Where $where */
-                if($where->column == 'status_id') {
+                if ($where->column == 'status_id') {
                     return;
                 }
             }

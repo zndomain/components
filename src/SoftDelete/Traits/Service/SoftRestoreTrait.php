@@ -2,8 +2,6 @@
 
 namespace ZnDomain\Сomponents\SoftDelete\Traits\Service;
 
-use ZnLib\Components\Status\Enums\StatusEnum;
-
 trait SoftRestoreTrait
 {
 

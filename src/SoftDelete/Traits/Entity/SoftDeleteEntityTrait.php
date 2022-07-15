@@ -2,7 +2,6 @@
 
 namespace ZnDomain\Сomponents\SoftDelete\Traits\Entity;
 
-use ZnCore\Contract\User\Exceptions\UnauthorizedException;
 use ZnLib\Components\Status\Enums\StatusEnum;
 
 /**
@@ -15,7 +14,7 @@ trait SoftDeleteEntityTrait
 
     public function delete(): void
     {
-        if($this->getStatusId() == StatusEnum::DELETED) {
+        if ($this->getStatusId() == StatusEnum::DELETED) {
             throw new \DomainException('The entry has already been deleted');
         }
         $this->statusId = StatusEnum::DELETED;

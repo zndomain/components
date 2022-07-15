@@ -14,7 +14,7 @@ trait SoftRestoreEntityTrait
 
     public function restore(): void
     {
-        if($this->getStatusId() == StatusEnum::ENABLED) {
+        if ($this->getStatusId() == StatusEnum::ENABLED) {
             throw new \DomainException('The entry has already been restored');
         }
         $this->statusId = StatusEnum::ENABLED;
