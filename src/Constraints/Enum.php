@@ -1,6 +1,6 @@
 <?php
 
-namespace ZnDomain\Сomponents\EnumRepository\Constraints;
+namespace ZnDomain\Сomponents\Constraints;
 
 use Symfony\Component\Validator\Constraint;
 
