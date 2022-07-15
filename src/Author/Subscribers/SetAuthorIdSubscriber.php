@@ -39,6 +39,6 @@ class SetAuthorIdSubscriber implements EventSubscriberInterface
         /** @var EntityIdInterface $entity */
         $entity = $event->getEntity();
         $identityId = $this->authService->getIdentity()->getId();
-        PropertyHelper::setAttribute($entity, $this->attribute, $identityId);
+        PropertyHelper::setValue($entity, $this->attribute, $identityId);
     }
 }
